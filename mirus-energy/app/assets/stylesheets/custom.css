@@ -1,0 +1,165 @@
+/* Add here all your css styles (customizations) */
+/*Navbar*/
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+@import url(https://fonts.googleapis.com/css?family=Pathway+Gothic+One);
+
+body {
+  width: 100%;
+  height: 100%;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/*Headings*/
+h1 {
+  font-size: 36px;
+  line-height: 35px;
+}
+h2 {
+  font-size: 32px;
+  line-height: 33px;
+}
+h3 {
+  font-size: 20px;
+  line-height: 27px;
+}
+h4 {
+  line-height: 25px;
+}
+h5 {
+  line-height: 20px;
+}
+h6 {
+  line-height: 18px;
+}
+h1, h2, h3, h4, h5, h6 {
+  color: #555;
+  margin-top: 5px;
+  text-shadow: none;
+  font-weight: normal;
+  font-family: "Pathway Gothic One", Arial, sans-serif;
+}
+.one-page-header {
+  border-bottom: none;
+  background: rgba(255,255,255,1);
+}
+.one-page-header .navbar-nav > li > a {
+    font-family: 'Raleway', sans-serif;
+    color: #777;
+    font-size: 18px;
+    text-transform: lowercase;
+    padding: 17px 15px 13px;
+}
+.one-page-header .navbar-nav > li > a:hover {
+  z-index: 1;
+  color: #ec2025;
+}
+.one-page-header .navbar-nav > li > a:focus {
+  color: #777;
+}
+::selection {
+  background: #ec2025;
+}
+
+/*Navbar Logo*/
+.one-page-header .navbar-brand {
+  font-size: 42px;
+  font-weight: 200;
+  line-height: 15px;
+  padding: 17px 15px 13px;
+  color: #333 !important;
+  font-family: 'Pathway Gothic One', sans-serif;
+}
+
+@media(min-width: 992px) {
+  .one-page-header.navbar {
+    padding: 24px 0;
+    -webkit-transition: background .3s ease-in-out,padding .3s ease-in-out;
+    -moz-transition: background .3s ease-in-out,padding .3s ease-in-out;
+    transition: background .3s ease-in-out,padding .3s ease-in-out;
+  }
+
+  .one-page-header.top-nav-collapse {
+    padding: 7px 0;
+  }
+}
+
+/*About Section*/
+.about-section {
+  padding-top: 0px;
+  padding-bottom: 0;
+}
+.about-section .about-image-sm {
+  padding-top: 60px;
+}
+/*Team Image*/
+.team-v1 li:hover > .team-img:after {
+  background: rgba(41,180,231,0.8);
+}
+
+.content-boxes-v3 h2 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.headline h2,
+.headline h3,
+.headline h4 {
+  margin: 0 0 -2px 0;
+  padding-bottom: 5px;
+  display: inline-block;
+  border-bottom: 2px solid #ec2025;
+}
+
+/*Choose Block*/
+.who li {
+	margin-bottom: 6px;
+}
+.who li i {
+	color: #3498db;
+	font-size: 13px;
+	min-width: 15px;
+	margin-right: 8px;
+	text-align: center;
+	position: relative;
+}
+.who li:hover i,
+.who li:hover a {
+	color: #777;
+}
+.who li:hover a:hover {
+	text-decoration: none;
+}
+
+.service-block-mirus-blue {
+  background: #29b4e7;
+}
+.service-block-mirus-red {
+  background: #ec2025;
+}
+.map-box {
+	height: 350px;
+}
+
+/*Navbar Toggle*/
+.one-page-header .navbar-toggle {
+  margin-right: 3px;
+  padding-right: 10px;
+  background-color: #29b4e7;
+}
+.one-page-header .navbar-toggle:hover,
+.one-page-header .navbar-toggle:focus {
+  background-color: #29b4e7;
+}
+
+.interactive-slider-v2 {
+  background: url(<%= asset_url('bg/7.jpg')%>) no-repeat;
+}
+
+img{
+  margin-left: auto;
+  margin-right: auto;
+}

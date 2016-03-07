@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mirus Energy</title>
+  <script src="http://maps.google.com/maps/api/js?"></script>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Mirus Energy description">
+  <meta name="author" content="Jon Van Lew">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicon -->
+	<!-- <link rel="shortcut icon" href="favicon.ico"> -->
+
+</head>
+
+<!--
+The #page-top ID is part of the scrolling feature.
+The data-spy and data-target are part of the built-in Bootstrap scrollspy function.
+-->
+<body id="body" data-spy="scroll" data-target=".one-page-header" class="demo-lightbox-gallery">
+
+<%= yield %>
+
+
+</body>
+
+<script>
+
+  // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  // m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  // })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  //
+  // ga('create', 'UA-9968903-14', 'auto');
+  // ga('send', 'pageview');
+
+	jQuery(document).ready(function() {
+		App.init();
+		App.initCounter();
+		ContactPage.initMap();
+		App.initParallaxBg();
+		LoginForm.initLoginForm();
+		ContactForm.initContactForm();
+		OwlCarousel.initOwlCarousel();
+		StyleSwitcher.initStyleSwitcher();
+		RevolutionSlider.initRSfullScreen();
+	});
+</script>
+
+</html>

@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  get 'user/index'
+  get 'users/index'
   resources :articles
-  resources :user
+  resources :users
 
   get 'home/index'
 

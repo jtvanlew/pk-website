@@ -3,6 +3,7 @@
 <head>
   <title>Mirus Energy</title>
   <script src="http://maps.google.com/maps/api/js?"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -28,6 +29,17 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
 <%= yield %>
 
 
+<div class="bg-grey">
+  <div class="container content-xs">
+    <div class="row">
+        <div class="col-md-6">
+            <p>
+                Site design by <a href="http://www.github.com/jtvanlew">Jon Van Lew</a> &amp; Mirus Energy.
+            </p>
+        </div>
+    </div>
+  </div>
+</div><!--/copyright-->
 </body>
 
 <script>
@@ -39,18 +51,17 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
   //
   // ga('create', 'UA-9968903-14', 'auto');
   // ga('send', 'pageview');
+  $(document).on('ready page:load', function() {
+  		App.init();
+  		App.initCounter();
+  		App.initParallaxBg();
+  		LoginForm.initLoginForm();
+  		ContactForm.initContactForm();
+  		OwlCarousel.initOwlCarousel();
+  		RevolutionSlider.initRSfullScreen();
+      ContactPage.initMap();
+  });
 
-	jQuery(document).ready(function() {
-		App.init();
-		App.initCounter();
-		ContactPage.initMap();
-		App.initParallaxBg();
-		LoginForm.initLoginForm();
-		ContactForm.initContactForm();
-		OwlCarousel.initOwlCarousel();
-		StyleSwitcher.initStyleSwitcher();
-		RevolutionSlider.initRSfullScreen();
-	});
 </script>
 
 </html>

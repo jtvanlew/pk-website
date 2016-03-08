@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  get 'user/index'
+  resources :articles
+  resources :user
+
   get 'home/index'
 
   # The priority is based upon order of creation: first created -> highest priority.

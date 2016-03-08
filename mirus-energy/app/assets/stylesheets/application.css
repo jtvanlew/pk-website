@@ -24,11 +24,10 @@
  //= require settings
  //= require sky-forms
  //= require custom-sky-forms
-
  //= require page_contact
  /*<!-- CSS Theme -->*/
- //= require blue
+
  //= require one.dark
-
-
+ //= require blog.style
+ //= require blue
  //= require custom

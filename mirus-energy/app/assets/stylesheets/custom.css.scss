@@ -10,7 +10,12 @@ body {
   font-size: 16px;
   line-height: 1.6;
 }
-
+a,
+a:focus,
+a:hover,
+a:active {
+  color: #ec2025;
+}
 /*Headings*/
 h1 {
   font-size: 36px;
@@ -68,7 +73,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 200;
   line-height: 15px;
   padding: 17px 15px 13px;
-  color: #333 !important;
+  color: #777 !important;
   font-family: 'Pathway Gothic One', sans-serif;
 }
 
@@ -156,10 +161,88 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .interactive-slider-v2 {
-  background: url(<%= asset_url('bg/7.jpg')%>) no-repeat;
+  background: image-url("bg/7.jpg") no-repeat;
 }
 
 img{
   margin-left: auto;
   margin-right: auto;
+}
+
+
+.wrapper .user-show {
+  padding-top: 40px;
+}
+
+
+/*Team Discription*/
+.team-v1 li > h3 {
+  color: #000;
+  font-size: 24px;
+  line-height: 20px;
+  margin: 15px 0 7px;
+  text-transform: uppercase;
+}
+
+.team-v1 li > h4 {
+  color: #999;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.team-v6 {
+  text-align: left;
+}
+.team-v6 h4 {
+  color: #999;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+.team-v6 li > h3 {
+  color: #000;
+  font-size: 24px;
+  line-height: 20px;
+  margin: 15px 0 7px;
+  text-transform: uppercase;
+}
+
+.blog-thumb-v3 h3 {
+	font-size: 18px;
+	margin: 0 0 5px;
+	font-weight: 400;
+	line-height: 1.2;
+}
+
+.blog-thumb-v3 h3 a {
+	color: #555;
+}
+
+.blog-thumb-v3 small,
+.blog-thumb-v3 small a {
+  font-size: 11px;
+	color: #999;
+}
+.article h2{
+  color: #ec2025;
+}
+.blog-thumb-v3 small a:hover {
+	color: #ec2025;
+}
+
+/*Read More Link*/
+a.r-more {
+  font-size: 13px;
+  font-weight: 400;
+  font-style: italic;
+  display: inline-block;
+}
+
+/*Parallax Twitter (Owl Carousel)
+------------------------------------*/
+.parallax-twitter {
+  background: image-url("bg/19.jpg") fixed;
+  background-size: cover;
+  background-position: center bottom;
 }

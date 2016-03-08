@@ -508,26 +508,26 @@ h3.heading-xs {
   margin-bottom: 0;
 }
 
-/*Devider
+/*divider
 ------------------------------------*/
-.devider.devider-dotted {
+.divider.divider-dotted {
   border-top: 2px dotted #eee;
 }
-.devider.devider-dashed {
+.divider.divider-dashed {
   border-top: 2px dashed #eee;
 }
 
-.devider.devider-db {
+.divider.divider-db {
   height: 5px;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
 }
-.devider.devider-db-dashed {
+.divider.divider-db-dashed {
   height: 5px;
   border-top: 1px dashed #ddd;
   border-bottom: 1px dashed #ddd;
 }
-.devider.devider-db-dotted {
+.divider.divider-db-dotted {
   height: 5px;
   border-top: 1px dotted #ddd;
   border-bottom: 1px dotted #ddd;

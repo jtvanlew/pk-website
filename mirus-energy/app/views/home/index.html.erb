@@ -54,7 +54,7 @@
 <!-- End Interactive Slider v2 -->
 
 <div class="container content-sm">
-<!-- Service Box -->
+  <!-- Service Box -->
 		<div class="row text-center margin-bottom-60 ">
 				<div class="col-md-4 md-margin-bottom-50">
 						<img class="image-md margin-bottom-20" src="<%= asset_url('icons/flat/01.png')%>" alt="">
@@ -106,7 +106,8 @@
 		</div>
 		<!-- End Owl Clients v1 -->
 </div><!--/container -->
-<hr class="devider devider-db-dashed">
+<hr class="divider divider-db-dashed">
+
 <!--  Mission Section -->
 <section id="mission" class="mission-section section-first">
 	<div class="container content-sm">
@@ -119,21 +120,21 @@
 		<div class="row">
 			<div class="col-md-6 content-boxes-v3 margin-bottom-40">
 				<div class="clearfix margin-bottom-30">
-					<i class="icon-custom icon-md rounded-x icon-bg-u icon-line icon-trophy"></i>
+					<i class="icon-custom icon-md rounded-x icon-bg-u fa fa-trophy"></i>
 					<div class="content-boxes-in-v3">
 						<h2 class="heading-sm">Innovation Leader</h2>
 						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
 					</div>
 				</div>
 				<div class="clearfix margin-bottom-30">
-					<i class="icon-custom icon-md rounded-x icon-bg-u icon-line icon-directions"></i>
+					<i class="icon-custom icon-md rounded-x icon-bg-u fa fa-anchor"></i>
 					<div class="content-boxes-in-v3">
 						<h2 class="heading-sm">Best Solutions &amp; Approaches</h2>
 						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
 					</div>
 				</div>
 				<div class="clearfix margin-bottom-30">
-					<i class="icon-custom icon-md rounded-x icon-bg-u icon-line icon-diamond"></i>
+					<i class="icon-custom icon-md rounded-x icon-bg-u fa fa-line-chart"></i>
 					<div class="content-boxes-in-v3">
 						<h2 class="heading-sm">Quality Service &amp; Support</h2>
 						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
@@ -142,7 +143,6 @@
 			</div>
 
 			<div class="col-md-6">
-
 				<img class="img-responsive" src="<%= asset_url('mockup/img2.jpg')%>" alt="">
 			</div>
 		</div>
@@ -153,10 +153,39 @@
 
 <!--  About Section -->
 <section id="about" class="about-section section-first">
-	<div class="about-image-sm bg-grey">
+  <div class="team-v1 bg-grey content-sm">
 		<div class="container">
 			<div class="heading heading-v1 margin-bottom-40">
-				<h2>We are Meris Energy</h2>
+				<h2>Meet Our Team</h2>
+				<p>Professional bullshitters.</p>
+			</div>
+
+			<ul class="list-unstyled row">
+        <% User.each do |user| %>
+  				<li class="col-sm-3 col-xs-6 md-margin-bottom-40">
+  					<div class="team-img">
+              <%= link_to image_tag("team/img1-md.jpg", :class=>"img-responsive"), user_path(user) %>
+  						<ul>
+  							<li><a href="#"><i class="icon-custom icon-sm rounded-x fa fa-twitter"></i></a></li>
+  							<li><a href="#"><i class="icon-custom icon-sm rounded-x fa fa-facebook"></i></a></li>
+  							<li><a href="#"><i class="icon-custom icon-sm rounded-x fa fa-google-plus"></i></a></li>
+  						</ul>
+  					</div>
+  					<h3><%= link_to user.name, user_path(user) %></h3>
+  					<h4>/ <%= user.position %></h4>
+            <p> <%= user.description %> info </p>
+  				</li>
+        <% end %>
+			</ul>
+
+      <a href="<%= request.base_url %>/user/" class="btn-u btn-u-blue" role="button"><i class="fa fa-users"></i> Meet the rest</a>
+    </div>
+
+    <hr class="divider divider-db-dashed">
+
+		<div class="container">
+			<div class="heading heading-v1 margin-bottom-40">
+				<h2>Together, we are Mirus Energy</h2>
 				<p>ULorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br>
 				Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <strong>Excepteur</strong> sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 			</div>
@@ -166,69 +195,7 @@
 		</div>
 	</div>
 
-	<div class="team-v1 bg-grey content-sm">
-		<div class="container">
-			<div class="heading heading-v1 margin-bottom-40">
-				<h2>Meet Our Team</h2>
-				<p>Professional bullshitters.</p>
-			</div>
 
-			<ul class="list-unstyled row">
-				<li class="col-sm-3 col-xs-6 md-margin-bottom-30">
-					<div class="team-img">
-						<img class="img-responsive" src="<%= asset_url('team/img1-md.jpg')%>" alt="">
-						<ul>
-							<li><a href="#"><i class="icon-custom icon-sm rounded-x fa fa-twitter"></i></a></li>
-							<li><a href="#"><i class="icon-custom icon-sm rounded-x fa fa-facebook"></i></a></li>
-							<li><a href="#"><i class="icon-custom icon-sm rounded-x fa fa-google-plus"></i></a></li>
-						</ul>
-					</div>
-					<h3>John Doe</h3>
-					<h4>/ Technical Director</h4>
-					<p>Technical Director mi porta gravida at eget metus id elit mi egetine...</p>
-				</li>
-				<li class="col-sm-3 col-xs-6 md-margin-bottom-30">
-					<div class="team-img">
-						<img class="img-responsive" src="<%= asset_url('team/img1-md.jpg')%>" alt="">
-						<ul>
-							<li><a href="#"><i class="icon-custom icon-sm rounded-x fa fa-twitter"></i></a></li>
-							<li><a href="#"><i class="icon-custom icon-sm rounded-x fa fa-facebook"></i></a></li>
-							<li><a href="#"><i class="icon-custom icon-sm rounded-x fa fa-google-plus"></i></a></li>
-						</ul>
-					</div>
-					<h3>Jane Doe</h3>
-					<h4>/ Lead Designer</h4>
-					<p>Lead Designer mi porta gravida at eget metus id elit mi egetine...</p>
-				</li>
-				<li class="col-sm-3 col-xs-6">
-					<div class="team-img">
-						<img class="img-responsive" src="<%= asset_url('team/img1-md.jpg')%>" alt="">
-						<ul>
-							<li><a href="#"><i class="icon-custom icon-sm rounded-x fa fa-twitter"></i></a></li>
-							<li><a href="#"><i class="icon-custom icon-sm rounded-x fa fa-facebook"></i></a></li>
-							<li><a href="#"><i class="icon-custom icon-sm rounded-x fa fa-google-plus"></i></a></li>
-						</ul>
-					</div>
-					<h3>Walid Ismail</h3>
-					<h4>/ Lead Bullshitter</h4>
-					<p>Web Developer in Unify agency porta gravida at eget metus id elit...</p>
-				</li>
-				<li class="col-sm-3 col-xs-6">
-					<div class="team-img">
-						<img class="img-responsive" src="<%= asset_url('team/img1-md.jpg')%>" alt="">
-						<ul>
-							<li><a href="#"><i class="icon-custom icon-sm rounded-x fa fa-twitter"></i></a></li>
-							<li><a href="#"><i class="icon-custom icon-sm rounded-x fa fa-facebook"></i></a></li>
-							<li><a href="#"><i class="icon-custom icon-sm rounded-x fa fa-google-plus"></i></a></li>
-						</ul>
-					</div>
-					<h3>Jon Van Lew</h3>
-					<h4>/ Super sexy</h4>
-					<p>Former Designer in Twitter non mi porta gravida at elit mi egetine...</p>
-				</li>
-			</ul>
-		</div>
-	</div>
 
 </section>
 <!--  About Section -->
@@ -238,53 +205,34 @@
 <section id="news" class="news-section">
 	<div class="container content-sm ">
 		<div class="heading heading-v1 margin-bottom-40">
-			<h2>In The News</h2>
+			<h2>News from Mirus Energy</h2>
 			<p>Mirus Energy has been in the news maybe I guess at some time <br>
 				Here are links to those news clips or whatever.</p>
 		</div>
 
-		<div class="row news-v1">
+    <div class="row news-v1">
+    <% @articles.each do |article| %>
+
 			<div class="col-md-4 md-margin-bottom-40">
 				<div class="news-v1-in tag-box box-shadow shadow-effect-2">
-					<img class="img-responsive" src="<%= asset_url('team/img1-md.jpg')%>" alt="">
-					<h3><a href="#">News clip title 1</a></h3>
-					<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores.</p>
+          <% if article.header_img_name %>
+            <%= link_to image_tag(article.header_img_name, :class=>"img-responsive"), article_path(article) %>
+          <% else %>
+            <%= link_to image_tag('logo.png', :class=>"img-responsive"), article_path(article) %>
+          <% end %>
+					<h3><%= link_to article.title, article_path(article) %></h3>
+					<p><%= sanitize(truncate(article.body, length: 150)) %> <%= link_to "read more", article_path(article), { :class=>"r-more" } %></p>
 					<ul class="list-inline news-v1-info">
-						<li><span>By</span> <a href="#">Kathy Reyes</a></li>
+						<li><span>By</span> <%= article.author %></li>
 						<li>|</li>
-						<li><i class="fa fa-clock-o"></i> July 02, 2014</li>
-						<li class="pull-right"><a href="#"><i class="fa fa-comments-o"></i> 14</a></li>
+						<li><i class="fa fa-clock-o"></i> <%= article.date %></li>
 					</ul>
 				</div>
 			</div>
-			<div class="col-md-4 md-margin-bottom-40">
-				<div class="news-v1-in tag-box box-shadow shadow-effect-2">
-					<img class="img-responsive" src="<%= asset_url('team/img1-md.jpg')%>" alt="">
-					<h3><a href="#">News clip title 2</a></h3>
-					<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores.</p>
-					<ul class="list-inline news-v1-info">
-						<li><span>By</span> <a href="#">John Clarck</a></li>
-						<li>|</li>
-						<li><i class="fa fa-clock-o"></i> July 02, 2014</li>
-						<li class="pull-right"><a href="#"><i class="fa fa-comments-o"></i> 07</a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="news-v1-in tag-box box-shadow shadow-effect-2">
-					<img class="img-responsive" src="<%= asset_url('team/img1-md.jpg')%>" alt="">
-					<h3><a href="#">News clip title 3</a></h3>
-					<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores.</p>
-					<ul class="list-inline news-v1-info">
-						<li><span>By</span> <a href="#">Tina Kruiger</a></li>
-						<li>|</li>
-						<li><i class="fa fa-clock-o"></i> July 02, 2014</li>
-						<li class="pull-right"><a href="#"><i class="fa fa-comments-o"></i> 22</a></li>
-					</ul>
-				</div>
-			</div>
+    <% end %>
 		</div>
-	</div>
+    <a href="<%= request.base_url %>/articles/" class="btn-u btn-u-blue" role="button"><i class="fa fa-newspaper-o"></i> Read all articles</a>
+  </div>
 
 	<div class="parallax-twitter parallaxBg">
 		<div class="container parallax-twitter-in">
@@ -364,17 +312,5 @@
     </div><!--/row-->
 </div><!--/container-->
 </section>
-<!--=== End Content Part ===-->
 
-<section id="footer" class="footer-section">
-		<div class="container footer-v7 bg-grey content-xs">
-              <div class="row">
-                  <div class="col-md-6">
-                      <p>
-                          Site design by <a href="http://www.github.com/jtvanlew">Jon Van Lew</a>.
-                      </p>
-                  </div>
-              </div>
-      </div><!--/copyright-->
-</section>
 <!-- End Contact Section -->

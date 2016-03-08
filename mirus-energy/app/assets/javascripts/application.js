@@ -36,6 +36,5 @@
 //= require pages/page_contacts
 //= require plugins/pace-loader
 //= require plugins/owl-carousel
-//= require plugins/style-switcher
 //= require plugins/revolution-slider
 //= require plugins/cube-portfolio/cube-portfolio-lightbox

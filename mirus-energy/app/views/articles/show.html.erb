@@ -1,0 +1,89 @@
+<!--=== Header ===-->
+<nav class="one-page-header navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+
+		<div class="menu-container page-scroll">
+
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+
+			<a class="navbar-brand" href="<%= request.base_url %>">
+				<span>M</span>irus <span>E</span>nergy
+				<!-- <img src="assets/img/logo-sm.png" alt="Logo">-->
+			</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse navbar-ex1-collapse">
+			<div class="menu-container">
+				<ul class="nav navbar-nav">
+          <li>
+            <%= link_to "Return to Articles", articles_path %>
+          </li>
+					<li>
+						<%= link_to "Home", root_url %>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- /.navbar-collapse -->
+	</div>
+	<!-- /.container -->
+</nav>
+<!--=== End Header ===-->
+
+
+<div class="container content-lg article">
+  <div class="row margin-bottom-30">
+    <div class="col-md-9">
+      <div class="blog-grid margin-bottom-30">
+  			<h2 class="blog-grid-title-lg"><%= @article.title %></h2>
+  			<div class="overflow-h margin-bottom-10">
+  				<ul class="blog-grid-info pull-left">
+  					<li><%= @article.author %></li>
+  					<li><%= @article.date %></li>
+  				</ul>
+  			</div>
+        <% if @article.header_img_name %>
+          <img class="img-responsive" src="<%= asset_url(@article.header_img_name)%>" alt="">
+        <% end %>
+        <%= @article.body %>
+			</div>
+    </div>
+    <div class="col-md-3">
+  		<!-- Blog Thumb v3 -->
+  		<div class="margin-bottom-50">
+  			<h2 class="title-v4">Recent Articles</h2>
+        <% @articles.each do |article| %>
+  			<div class="blog-thumb-v3">
+          <small><%= article.author %> </small>
+          <h3><%= link_to article.title, article_path(article) %></h3>
+  			</div>
+        <hr class="hr-xs">
+        <% end %>
+      </div>
+
+      <div class="margin-bottom-50">
+					<h2 class="title-v4">Social</h2>
+					<ul class="blog-social-shares">
+						<li>
+							<i class="rounded-x fb fa fa-facebook"></i>
+							<a class="rounded-3x" href="#">Like</a>
+						</li>
+						<li>
+							<i class="rounded-x tw fa fa-twitter"></i>
+							<a class="rounded-3x" href="#">Follow Us</a>
+						</li>
+						<li>
+							<i class="rounded-x gp fa fa-google-plus"></i>
+							<a class="rounded-3x" href="#">Add to circle</a>
+						</li>
+					</ul>
+				</div>
+    </div>
+  </div>
+</div>

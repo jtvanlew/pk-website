@@ -39,25 +39,25 @@
 <!--=== Team block 1 ===-->
 <div class="container content-sm">
   <div class="headline-center margin-bottom-30">
-      <h2>ACCOUNT DIRECTORS</h2>
+      <h1>ACCOUNT DIRECTORS</h1>
       <p>Phasellus vitae ipsum ex. Etiam eu vestibulum ante. <br>
       Lorem ipsum <strong>dolor</strong> sit amet, consectetur adipiscing elit. Morbi libero libero, imperdiet fringilla </p>
   </div>
-  <div class="team-v1">
+  <div class="team-v4">
     <ul class="list-unstyled row">
       <% @users.each_with_index do |user, index| %>
         <li class="col-sm-4 col-xs-1">
           <div class="team-img">
-            <img class="img-responsive" src="<%= asset_url('team/img1-md.jpg')%>" alt="">
-            <ul>
-              <li><a href="#"><i class="icon-custom icon-sm rounded-x fa fa-twitter"></i></a></li>
-              <li><a href="#"><i class="icon-custom icon-sm rounded-x fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="icon-custom icon-sm rounded-x fa fa-google-plus"></i></a></li>
-            </ul>
+            <%= link_to image_tag("team/"+user.img_name, :class=>"img-responsive"), user_path(user) %>
           </div>
           <h3><%= link_to user.name, user_path(user) %></h3>
           <h4>/ <%= user.position %></h4>
           <p>Technical Director mi porta gravida at eget metus id elit mi egetine...</p>
+          <ul class="list-inline team-social-v4">
+            <li><a href="#"><i class="icon-custom icon-sm rounded-x fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="icon-custom icon-sm rounded-x fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="icon-custom icon-sm rounded-x fa fa-google-plus"></i></a></li>
+          </ul>
         </li>
       <% end %>
     </ul>
@@ -70,25 +70,25 @@
 <!--=== Team block 2 ===-->
 <div class="container content-sm">
   <div class="headline-center margin-bottom-30">
-      <h2>ACCOUNT DIRECTORS</h2>
+      <h1>FOLLOWERS</h1>
       <p>Phasellus vitae ipsum ex. Etiam eu vestibulum ante. <br>
       Lorem ipsum <strong>dolor</strong> sit amet, consectetur adipiscing elit. Morbi libero libero, imperdiet fringilla </p>
   </div>
-  <div class="team-v1">
+  <div class="team-v4">
     <ul class="list-unstyled row">
       <% @users.each_with_index do |user, index| %>
         <li class="col-sm-3 col-xs-2">
           <div class="team-img">
-            <img class="img-responsive" src="<%= asset_url('team/img1-md.jpg')%>" alt="">
-            <ul>
-              <li><a href="#"><i class="icon-custom icon-sm rounded-x fa fa-twitter"></i></a></li>
-              <li><a href="#"><i class="icon-custom icon-sm rounded-x fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="icon-custom icon-sm rounded-x fa fa-google-plus"></i></a></li>
-            </ul>
+            <%= link_to image_tag("team/"+user.img_name, :class=>"img-responsive"), user_path(user) %>
           </div>
           <h3><%= link_to user.name, user_path(user) %></h3>
           <h4>/ <%= user.position %></h4>
           <p>Technical Director mi porta gravida at eget metus id elit mi egetine...</p>
+          <ul class="list-inline team-social-v4">
+            <li><a href="#"><i class="icon-custom icon-sm rounded-x fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="icon-custom icon-sm rounded-x fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="icon-custom icon-sm rounded-x fa fa-google-plus"></i></a></li>
+          </ul>
         </li>
       <% end %>
     </ul>

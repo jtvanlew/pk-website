@@ -164,7 +164,7 @@
         <% User.each do |user| %>
   				<li class="col-sm-3 col-xs-6 md-margin-bottom-40">
   					<div class="team-img">
-              <%= link_to image_tag("team/img1-md.jpg", :class=>"img-responsive"), user_path(user) %>
+              <%= link_to image_tag("team/"+user.img_name, :class=>"img-responsive"), user_path(user) %>
   						<ul>
   							<li><a href="#"><i class="icon-custom icon-sm rounded-x fa fa-twitter"></i></a></li>
   							<li><a href="#"><i class="icon-custom icon-sm rounded-x fa fa-facebook"></i></a></li>

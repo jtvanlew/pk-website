@@ -5,4 +5,5 @@ class User
   field :img_name, type: String
   field :position, type: String
   field :description, type: String
+  has_many :articles
 end

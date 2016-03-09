@@ -11,7 +11,7 @@
 			</button>
 
 			<a class="navbar-brand" href="#intro">
-				<span>M</span>irus <span>E</span>nergy
+				<span class="red-span">M</span>irus <span>E</span>nergy
 				<!-- <img src="assets/img/logo-sm.png" alt="Logo">-->
 			</a>
 		</div>
@@ -164,7 +164,7 @@
         <% User.each do |user| %>
   				<li class="col-sm-3 col-xs-6 md-margin-bottom-40">
   					<div class="team-img">
-              <%= link_to image_tag("team/img1-md.jpg", :class=>"img-responsive"), user_path(user) %>
+              <%= link_to image_tag("team/"+user.img_name, :class=>"img-responsive"), user_path(user) %>
   						<ul>
   							<li><a href="#"><i class="icon-custom icon-sm rounded-x fa fa-twitter"></i></a></li>
   							<li><a href="#"><i class="icon-custom icon-sm rounded-x fa fa-facebook"></i></a></li>
@@ -177,8 +177,7 @@
   				</li>
         <% end %>
 			</ul>
-
-      <a href="<%= request.base_url %>/user/" class="btn-u btn-u-blue" role="button"><i class="fa fa-users"></i> Meet the rest</a>
+      <a href="<%= users_path %>" class="btn-u btn-u-blue" role="button"><i class="fa fa-users"></i> Meet the rest</a>
     </div>
 
     <hr class="divider divider-db-dashed">
@@ -223,7 +222,7 @@
 					<h3><%= link_to article.title, article_path(article) %></h3>
 					<p><%= sanitize(truncate(article.body, length: 150)) %> <%= link_to "read more", article_path(article), { :class=>"r-more" } %></p>
 					<ul class="list-inline news-v1-info">
-						<li><span>By</span> <%= article.author %></li>
+						<li><span>By</span> <%= link_to article.user.name, user_path(article.user.id) %></li>
 						<li>|</li>
 						<li><i class="fa fa-clock-o"></i> <%= article.date %></li>
 					</ul>

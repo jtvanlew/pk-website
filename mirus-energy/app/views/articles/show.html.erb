@@ -22,7 +22,7 @@
 			<div class="menu-container">
 				<ul class="nav navbar-nav">
           <li>
-            <%= link_to "Return to Articles", articles_path %>
+            <%= link_to "Up to Articles List", articles_path %>
           </li>
 					<li>
 						<%= link_to "Home", root_url %>
@@ -44,7 +44,7 @@
   			<h2 class="blog-grid-title-lg"><%= @article.title %></h2>
   			<div class="overflow-h margin-bottom-10">
   				<ul class="blog-grid-info pull-left">
-  					<li><%= @article.author %></li>
+  					<li>By <%= link_to @article.user.name, user_path(@article.user.id) %></li>
   					<li><%= @article.date %></li>
   				</ul>
   			</div>
@@ -54,17 +54,19 @@
         <%= @article.body %>
 			</div>
     </div>
+
     <div class="col-md-3">
   		<!-- Blog Thumb v3 -->
   		<div class="margin-bottom-50">
   			<h2 class="title-v4">Recent Articles</h2>
         <% @articles.each do |article| %>
   			<div class="blog-thumb-v3">
-          <small><%= article.author %> </small>
+          <small><%= link_to article.user.name, user_path(article.user.id) %> </small>
           <h3><%= link_to article.title, article_path(article) %></h3>
   			</div>
         <hr class="hr-xs">
         <% end %>
+
       </div>
 
       <div class="margin-bottom-50">

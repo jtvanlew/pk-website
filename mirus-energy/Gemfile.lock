@@ -196,7 +196,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activerecord
   bootstrap-sass (~> 3.3.5)
   bson_ext
   byebug

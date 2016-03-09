@@ -177,8 +177,7 @@
   				</li>
         <% end %>
 			</ul>
-
-      <a href="<%= request.base_url %>/user/" class="btn-u btn-u-blue" role="button"><i class="fa fa-users"></i> Meet the rest</a>
+      <a href="<%= users_path %>" class="btn-u btn-u-blue" role="button"><i class="fa fa-users"></i> Meet the rest</a>
     </div>
 
     <hr class="divider divider-db-dashed">
@@ -223,7 +222,7 @@
 					<h3><%= link_to article.title, article_path(article) %></h3>
 					<p><%= sanitize(truncate(article.body, length: 150)) %> <%= link_to "read more", article_path(article), { :class=>"r-more" } %></p>
 					<ul class="list-inline news-v1-info">
-						<li><span>By</span> <%= article.author %></li>
+						<li><span>By</span> <%= link_to article.user.name, user_path(article.user.id) %></li>
 						<li>|</li>
 						<li><i class="fa fa-clock-o"></i> <%= article.date %></li>
 					</ul>

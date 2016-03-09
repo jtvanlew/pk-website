@@ -21,7 +21,7 @@
 			<div class="menu-container">
 				<ul class="nav navbar-nav">
           <li class="page-scroll home">
-						<%= link_to "return to Personnel", users_path %>
+						<%= link_to "Up to Personnel List", users_path %>
 					</li>
 					<li>
 						<%= link_to "Home", root_url %>
@@ -45,7 +45,7 @@
                 </div>
             </div>
 
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="overflow-h">
                     <div class="pull-left">
                         <h2><%= @user.name %></h2>
@@ -62,6 +62,22 @@
                 <p>Nulla fermentum blandit dolor eu dictum. Nulla faucibus libero eget mi tempus, quis laoreet ante congue. Nullam sed tortor vitae magna auctor vestibulum. Fusce gravida, mauris at vulputate aliquet, arcu nunc scelerisque mi, pellentesque mollis lectus mauris in urna.</p>
                 <p>Suspendisse non magna sed justo tincidunt pellentesque. Proin sit amet ligula vel orci tempus viverra. Donec massa justo, sodales in leo pretium, adipiscing dictum mi. Nullam sed eleifend purus. Sed eget lacus eget urna venenatis hendrerit sed sit amet dui. Suspendisse lorem velit, tincidunt nec mattis ut, gravida adipiscing sapien.</p><br>
 
+            </div>
+
+
+            <div class="col-sm-2">
+              <% if @articles.any? %>
+              <!-- Blog Thumb v3 -->
+          		<div class="margin-bottom-50">
+          			<h2 class="title-v4">Recent Articles by <%= @articles.first.user.name %></h2>
+                <% @articles.each do |article| %>
+          			<div class="blog-thumb-v3">
+                  <h3><%= link_to article.title, article_path(article) %></h3>
+          			</div>
+                <hr class="hr-xs">
+                <% end %>
+              </div>
+              <% end %>
             </div>
         </div>
     </div>

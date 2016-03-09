@@ -1,5 +1,3 @@
-require 'active_record'
-
 class User
   include Mongoid::Document
   field :name, type: String
@@ -7,8 +5,5 @@ class User
   field :img_name, type: String
   field :position, type: String
   field :description, type: String
+  has_many :articles
 end
-
-# class User < ActiveRecord::Base
-#   has_many :articles
-# end

@@ -4,6 +4,12 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100);
 @import url(https://fonts.googleapis.com/css?family=Pathway+Gothic+One);
 
+
+/*Team Image*/
+.team-v1 li > .team-img {
+  min-height: 18em;
+}
+
 .navbar-default .navbar-brand .red-span {
     color: #ec2025 !important;
 }

@@ -9,6 +9,6 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @articles = @user.articles.page(params[:page]).per(3)
+    @articles = @user.articles.order(date: :desc).limit(3)
   end
 end

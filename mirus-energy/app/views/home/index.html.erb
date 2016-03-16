@@ -166,9 +166,7 @@
   					<div class="team-img">
               <%= link_to image_tag("team/"+user.img_name, :class=>"img-responsive"), user_path(user) %>
   						<ul>
-  							<li><a href="#"><i class="icon-custom icon-sm rounded-x fa fa-twitter"></i></a></li>
-  							<li><a href="#"><i class="icon-custom icon-sm rounded-x fa fa-facebook"></i></a></li>
-  							<li><a href="#"><i class="icon-custom icon-sm rounded-x fa fa-google-plus"></i></a></li>
+  							<li> <a href="<%= user_path(user) %>" class="btn-u btn-u-red" role="button"><i class="fa fa-users"></i> See more</a></li>
   						</ul>
   					</div>
   					<h3><%= link_to user.name, user_path(user) %></h3>
@@ -253,61 +251,43 @@
 			<div class="heading heading-v1 margin-bottom-40">
 				<h2>Contact Us</h2>
 			</div>
-        <div class="col-md-9 mb-margin-bottom-30">
+        <div class="col-md-8 col-md-offset-2 mb-margin-bottom-30">
             <!-- Google Map -->
-            <div id="map" class="map map-box map-box-space margin-bottom-40"></div>
+            <!-- <div id="map" class="map map-box map-box-space margin-bottom-40"></div> -->
             <!-- End Google Map -->
 
-            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas feugiat. Et harum quidem rerum facilis est et expedita distinctio lorem ipsum dolor sit amet, consectetur adipiscing elit landitiis.</p><br />
+            <!-- Contact start -->
+            <div class="headline"><h2> Send us a message</h2></div>
+						<form id="contact-form" action="javascript:void(0);" role="form" novalidate="">
 
-            <form action="assets/php/sky-forms-pro/demo-contacts-process.php" method="post" id="sky-form3" class="sky-form contact-style">
-                <fieldset class="no-padding">
-                    <label>Name <span class="color-red">*</span></label>
-                    <div class="row sky-space-20">
-                        <div class="col-md-7 col-md-offset-0">
-                            <div>
-                                <input type="text" name="name" id="name" class="form-control">
-                            </div>
-                        </div>
-                    </div>
+							<div class="form-group">
+								<label class="sr-only" for="cname">Name</label>
+								<input type="text" id="cname" class="form-control" name="Name" placeholder="Name*" required="" data-validation-required-message="Please enter your name.">
+								<p class="help-block text-danger"></p>
+							</div>
 
-                    <label>Email <span class="color-red">*</span></label>
-                    <div class="row sky-space-20">
-                        <div class="col-md-7 col-md-offset-0">
-                            <div>
-                                <input type="text" name="email" id="email" class="form-control">
-                            </div>
-                        </div>
-                    </div>
+							<div class="form-group">
+								<label class="sr-only" for="cemail">Your Email</label>
+								<input type="email" id="cemail" name="Email" class="form-control" placeholder="Your E-mail*" required="" data-validation-required-message="Please enter your email address.">
+								<p class="help-block text-danger"></p>
+							</div>
 
-                    <label>Message <span class="color-red">*</span></label>
-                    <div class="row sky-space-20">
-                        <div class="col-md-11 col-md-offset-0">
-                            <div>
-                                <textarea rows="8" name="message" id="message" class="form-control"></textarea>
-                            </div>
-                        </div>
-                    </div>
+							<div class="form-group">
+								<textarea class="form-control" id="cmessage" name="Message" rows="7" placeholder="Message*" required="" data-validation-required-message="Please enter your message."></textarea>
+								<p class="help-block text-danger"></p>
+							</div>
 
-                    <p><button type="submit" class="btn-u">Send Message</button></p>
-                </fieldset>
+							<input type="text" name="_gotcha" style="display:none" />
+							<!-- <input type="hidden" name="_next" value="#" /> -->
+							<input type="hidden" name="_subject" value="Hello from Tofu Ya website">
 
-                <div class="message">
-                    <i class="rounded-x fa fa-check"></i>
-                    <p>Your message was successfully sent!</p>
-                </div>
-            </form>
+							<div class="text-center">
+								<button type="submit" class="btn btn-block btn-round btn-d" value="Send">Submit</button>
+							</div>
+
+						</form>
+        		<!-- Contact end -->
         </div><!--/col-md-9-->
-
-        <div class="col-md-3">
-            <!-- Contacts -->
-            <div class="headline"><h2>Contacts</h2></div>
-            <ul class="list-unstyled who margin-bottom-30">
-                <li><a href="#"><i class="fa fa-home"></i> 420 Westwood Plaza </a></li>
-                <li><a href="#"><i class="fa fa-envelope"></i> info@mirus-energy.com</a></li>
-                <li><a href="#"><i class="fa fa-phone"></i> 1(222) 5x86 x97x</a></li>
-            </ul>
-        </div><!--/col-md-3-->
     </div><!--/row-->
 </div><!--/container-->
 </section>

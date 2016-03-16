@@ -61,7 +61,8 @@
   			<h2 class="title-v4">Recent Articles</h2>
         <% @articles.each do |article| %>
   			<div class="blog-thumb-v3">
-          <small><%= link_to article.user.name, user_path(article.user.id) %> </small>
+          <%= link_to article.user.name, user_path(article.user.id) %> /
+             <small><i class="fa fa-clock-o"></i> <%= article.date %> </small>
           <h3><%= link_to article.title, article_path(article) %></h3>
   			</div>
         <hr class="hr-xs">

@@ -73,6 +73,7 @@
                 <% @articles.each do |article| %>
           			<div class="blog-thumb-v3">
                   <h3><%= link_to article.title, article_path(article) %></h3>
+                  <small><i class="fa fa-clock-o"></i> <%= article.date %> </small>
           			</div>
                 <hr class="hr-xs">
                 <% end %>

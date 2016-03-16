@@ -29,7 +29,6 @@
 //= require jquery.themepunch.tools.min
 //= require jquery.themepunch.revolution.min
 //= require jquery.cubeportfolio.min
-//= require gmap.js
 //= require one.app
 //= require forms/login
 //= require forms/contact

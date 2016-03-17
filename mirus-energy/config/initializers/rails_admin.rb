@@ -1,13 +1,22 @@
 RailsAdmin.config do |config|
-
+  config.authenticate_with do
+    warden.authenticate! scope: :admin
+  end
+  config.current_user_method(&:current_admin)
   ### Popular gems integration
-
   ## == Devise ==
   # config.authenticate_with do
   #   warden.authenticate! scope: :user
   # end
   # config.current_user_method(&:current_user)
-
+  # unless Rails.env.development?
+  #   config.authorize_with do |controller|
+  #     unless current_user.try(:admin?)
+  #       flash[:error] = "You are not an admin"
+  #       redirect_to "/users/sign_in"
+  #     end
+  #   end
+  # end
   ## == Cancan ==
   # config.authorize_with :cancan
 

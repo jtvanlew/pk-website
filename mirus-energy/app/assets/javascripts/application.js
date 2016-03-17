@@ -37,3 +37,4 @@
 //= require plugins/owl-carousel
 //= require plugins/revolution-slider
 //= require plugins/cube-portfolio/cube-portfolio-lightbox
+//= require formspree

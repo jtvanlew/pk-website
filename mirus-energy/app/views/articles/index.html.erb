@@ -11,7 +11,7 @@
 				<span class="icon-bar"></span>
 			</button>
 
-			<a class="navbar-brand" href="<%= request.base_url %>">
+			<a class="navbar-brand">
 				<span class="red-span">M</span>irus <span>E</span>nergy
 				<!-- <img src="assets/img/logo-sm.png" alt="Logo">-->
 			</a>
@@ -22,7 +22,7 @@
 			<div class="menu-container">
 				<ul class="nav navbar-nav">
 					<li>
-						<%= link_to "Home", root_url %>
+						<%= link_to "Home", root_url, method: :get %>
 					</li>
 				</ul>
 			</div>

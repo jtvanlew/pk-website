@@ -130,7 +130,7 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
   //
   // ga('create', 'UA-9968903-14', 'auto');
   // ga('send', 'pageview');
-  $(document).on('ready page:load', function() {
+  var ready = function() {
   		App.init();
   		App.initCounter();
   		App.initParallaxBg();
@@ -139,8 +139,9 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
   		OwlCarousel.initOwlCarousel();
   		RevolutionSlider.initRSfullScreen();
       // ContactPage.initMap();
-  });
-
+  };
+  $(document).ready(ready);
+  $(document).on('page:load', ready);
 </script>
 
 </html>
